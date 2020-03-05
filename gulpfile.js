@@ -12,11 +12,12 @@ function bs() {
   });
   watch("./*.html").on('change', browserSync.reload);
   watch("./sass/**/*.sass", serveSass);
+  watch("./scss/**/*.scss", serveSass);
   watch("./js/*.js").on('change', browserSync.reload);
 };
 
 function serveSass() {
-  return src("./sass/*.sass", "./scss/*.sass")
+  return src("./sass/**/*.sass", "./scss/**/*.scss")
     .pipe(sass())
     .pipe(autoprefixer({
       cascade: false
