@@ -340,6 +340,8 @@ template {
     color: #fff; }
 
 .container {
+  width: 85%;
+  max-width: 1256px;
   margin: auto; }
 
 *, *:before, *:after {
@@ -400,10 +402,6 @@ body {
 
 .contacts__phone {
   margin-right: 45px; }
-
-.container {
-  margin-left: 82px;
-  margin-right: 82px; }
 
 .hero {
   position: relative;
