@@ -535,7 +535,7 @@ body {
   .hero__scroll-down {
     display: none; } }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 500px) {
   .hero__button {
     display: block;
     min-width: 100%;
