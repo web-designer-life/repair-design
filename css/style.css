@@ -319,7 +319,7 @@ template {
   display: none; }
 
 .button {
-  padding: 11px 24px;
+  padding: 11px 21px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
@@ -341,7 +341,6 @@ template {
 
 .container {
   width: 85%;
-  max-width: 1256px;
   margin: auto; }
 
 *, *:before, *:after {
@@ -378,6 +377,9 @@ body {
   background-color: #131313;
   padding: 24px 0; }
 
+.container {
+  margin: 0 82px; }
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -403,44 +405,56 @@ body {
 .contacts__phone {
   margin-right: 45px; }
 
+.contacts__button {
+  font-family: 'Futura Demi';
+  font-weight: 500; }
+
 .hero {
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 100px;
-  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
-  color: #fff; }
-  .hero::before {
+  color: #fff;
+  margin: auto; }
+  .hero::after {
     content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(19, 19, 19, 0.7); }
+    height: 3.46rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #131313; }
   .hero__content {
-    max-width: 47.85rem;
     position: relative;
-    margin-left: 4.28rem; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+    width: 100%;
+    padding-left: 4.28rem; }
+    .hero__content::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(19, 19, 19, 0.7); }
   .hero__text {
+    position: relative;
     font-size: 1.57rem;
     max-width: 550px;
     line-height: 1.39;
     margin-bottom: 45px;
     margin-top: 16px; }
   .hero__button {
+    position: relative;
     margin-right: 16px;
     font-family: 'Futura Demi';
     font-weight: 500;
     font-size: 13px;
-    padding: 17px 26px 18px 26px; }
+    padding: 17px 26px 18px 26px;
+    min-width: 207px; }
   .hero__instagram {
-    position: absolute;
-    left: 0;
-    top: 0;
     max-width: 82px;
     height: 100%; }
   .hero__scroll-down {
@@ -457,7 +471,8 @@ body {
     background-color: #131313;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff; }
+    color: #fff;
+    z-index: 9; }
     .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
@@ -466,6 +481,16 @@ body {
       border: 2px solid #E3B873;
       border-radius: 50%;
       margin-left: 18px; }
+  .hero__title {
+    position: relative;
+    margin-bottom: 0;
+    font-family: 'Yeseva One';
+    text-transform: uppercase;
+    font-size: 2.857rem;
+    line-height: 1.3;
+    max-width: 500px; }
+    .hero__title--primary {
+      color: #E3B873; }
 
 .instagram {
   width: 82px;
@@ -491,15 +516,6 @@ body {
       background-color: #E3B873;
       margin-left: 8px; }
 
-.title {
-  margin: 0;
-  font-family: 'Yeseva One';
-  text-transform: uppercase;
-  font-size: 2.857rem;
-  line-height: 1.3; }
-  .title--primary {
-    color: #E3B873; }
-
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
@@ -507,6 +523,8 @@ body {
     margin-right: 1rem; } }
 
 @media screen and (max-width: 992px) {
+  .container {
+    margin: auto; }
   .nav {
     display: none; }
   .hero__instagram {
@@ -526,7 +544,7 @@ body {
   .hero__scroll-down {
     display: none; }
   .hero__content {
-    mix-width: 22.86rem; }
+    min-width: 22.86rem; }
   .hero__text {
     font-size: 1.29rem;
     margin-bottom: 2.28rem; } }
@@ -536,6 +554,13 @@ body {
     display: none; } }
 
 @media screen and (max-width: 500px) {
+  .hero__content {
+    padding-left: 0;
+    padding: 1.28rem; }
+  .hero__title {
+    font-size: 23px; }
+  .hero__text {
+    max-width: 321px; }
   .hero__button {
     display: block;
     min-width: 100%;
