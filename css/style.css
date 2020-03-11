@@ -648,7 +648,9 @@ img {
     .design__section-title {
       color: #fff; }
     .design__card {
-      margin-bottom: 5.7rem; } }
+      margin-bottom: 5.7rem; }
+  .section-title__text {
+    color: #fff; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
