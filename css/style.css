@@ -584,7 +584,8 @@ img {
   justify-content: space-between; }
 
 .col {
-  flex-basis: 32%; }
+  flex-basis: 32%;
+  max-width: 392px; }
 
 .card__text {
   position: relative;
@@ -608,7 +609,7 @@ img {
   line-height: 1.79rem;
   color: #959595; }
 
-.card__pricetag {
+.card__price {
   position: absolute;
   left: 0;
   bottom: -1.79rem;
