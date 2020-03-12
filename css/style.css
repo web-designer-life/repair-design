@@ -521,15 +521,17 @@ img {
       margin-left: 8px; }
 
 .types__section-title {
-  margin-bottom: 2rem; }
+  margin-bottom: 31px; }
 
 .row {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between; }
+  justify-content: center; }
 
 .col {
-  flex-basis: 32%; }
+  flex-basis: 32%;
+  max-width: 392px;
+  margin: 0 15px; }
 
 .card__text {
   position: relative;
@@ -565,7 +567,7 @@ img {
   padding: 1.214rem 2.64rem; }
 
 .design__section-title {
-  margin-bottom: 4rem; }
+  margin-bottom: 3.5rem; }
 
 .section-title__text {
   margin: auto;
@@ -581,11 +583,12 @@ img {
 .row {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between; }
+  justify-content: center; }
 
 .col {
   flex-basis: 32%;
-  max-width: 392px; }
+  max-width: 392px;
+  margin: 0 15px; }
 
 .card__text {
   position: relative;
