@@ -10,6 +10,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   });
 
   closeBtn.addEventListener('click', switchModal);
-  
-});
 
+  window.onclick = function (event) {
+    if(event.target == modal) {
+      modal.classList.toggle('modal--visible');
+    }
+  };
+
+  window.addEventListener('keydown', function(event){
+    if (event.key === 'Escape'){
+      modal.classList.toggle('modal--visible');
+    }
+  });
+});
