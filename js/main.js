@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   var modal = document.querySelector('.modal');
+  var input = document.querySelector('.modal input[type=text]');
   var modalBtn = document.querySelectorAll('[data-toggle=modal]');
   var closeBtn = document.querySelector('.modal__close');
   var switchModal = function() {
     modal.classList.toggle('modal--visible');
+    input.focus();
   };
   
   modalBtn.forEach(function(element) {
