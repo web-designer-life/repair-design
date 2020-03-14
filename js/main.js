@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   window.addEventListener('keydown', function(event){
     if (event.key === 'Escape'){
-      modal.classList.toggle('modal--visible');
+      modal.classList.remove('modal--visible');
     }
   });
 });
