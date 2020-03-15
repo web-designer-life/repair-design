@@ -24,16 +24,6 @@ html {
   /* 1 */
   -webkit-text-size-adjust: 100%;
   /* 2 */ }
-.scrollup {
-  width: 40px;
-  height: 40px;
-  opacity: 0.3;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  display: none;
-  text-indent: -9999px;
-  background: url('../img/icon_top.png') no-repeat; }  
 
 /* Sections
      ========================================================================== */
@@ -373,8 +363,31 @@ template {
     color: #fff; }
 
 .container {
-  width: 85%;
+  max-width: 90%;
   margin: auto; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center; }
+
+.col {
+  flex-basis: 32%;
+  max-width: 392px;
+  margin: 0 15px; }
+
+.scrollup {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  opacity: 0.6;
+  bottom: 16px;
+  right: 16px;
+  display: none;
+  text-indent: -9999px;
+  background: url("../img/icon_top.png") no-repeat;
+  color: #fff;
+  z-index: 10000000; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -556,16 +569,6 @@ img {
 .types__section-title {
   margin-bottom: 31px; }
 
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center; }
-
-.col {
-  flex-basis: 32%;
-  max-width: 392px;
-  margin: 0 15px; }
-
 .card__text {
   position: relative;
   max-width: 23.6rem;
@@ -612,16 +615,6 @@ img {
   line-height: 1.93rem;
   text-align: center;
   color: #131313; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center; }
-
-.col {
-  flex-basis: 32%;
-  max-width: 392px;
-  margin: 0 15px; }
 
 .card__text {
   position: relative;
@@ -731,7 +724,8 @@ img {
 
 @media screen and (max-width: 992px) {
   .container {
-    margin: auto; }
+    margin: auto;
+    width: 100%; }
   .nav {
     display: none; }
   .hero__instagram {
@@ -743,6 +737,8 @@ img {
   .row {
     flex-direction: column;
     align-items: center; }
+  .col {
+    margin: 0 0; }
   .types__card {
     margin-bottom: 5rem; }
   .card__text {
