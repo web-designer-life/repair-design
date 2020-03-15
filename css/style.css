@@ -377,7 +377,7 @@ template {
   margin: 0 15px; }
 
 .col-50 {
-  flex-basis: 50%; }
+  width: 50%; }
 
 .scrollup {
   width: 40px;
@@ -404,23 +404,6 @@ body {
 
 img {
   max-width: 100%; }
-
-.section {
-  padding: 10.14rem 0; }
-  .section-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Yeseva One', cursive; }
-    .section-title__image {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .section-title__image::before, .section-title__image::after {
-        content: '';
-        width: 32px;
-        height: 2px;
-        background-color: #E3B873;
-        margin: 0 10px; }
 
 .header {
   position: fixed;
@@ -569,6 +552,45 @@ img {
       background-color: #E3B873;
       margin-left: 8px; }
 
+.section {
+  padding: 10.14rem 0; }
+  .section--dark {
+    background-color: #131313;
+    color: #fff; }
+  .section-title {
+    text-align: center; }
+    .section-title--left {
+      text-align: left; }
+    .section-title__heading {
+      text-transform: uppercase;
+      font-family: 'Yeseva One', cursive;
+      line-height: 138%; }
+      .section-title__heading--primary {
+        color: #E3B873; }
+    .section-title__word {
+      display: flex;
+      align-items: center; }
+      .section-title__word::after {
+        content: '';
+        width: 92px;
+        height: 2px;
+        background-color: #E3B873;
+        margin-left: 2rem; }
+    .section-title__text-description {
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      max-width: 31.57rem; }
+    .section-title__image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-title__image::before, .section-title__image::after {
+        content: '';
+        width: 32px;
+        height: 2px;
+        background-color: #E3B873;
+        margin: 0 10px; }
+
 .types__section-title {
   margin-bottom: 31px; }
 
@@ -616,8 +638,7 @@ img {
   font-family: 'Futura Book';
   font-size: 1.43rem;
   line-height: 1.93rem;
-  text-align: center;
-  color: #131313; }
+  text-align: center; }
 
 .card__text {
   position: relative;

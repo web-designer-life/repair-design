@@ -69,4 +69,8 @@ $(document).ready(function () {
   $("html, body").animate({ scrollTop: 0 }, 600);
   return false;
   });
+
+  var mySwiper = new Swiper ('.swiper-container', {
+    loop: true
+  });
 });
