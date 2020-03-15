@@ -71,6 +71,21 @@ $(document).ready(function () {
   });
 
   var mySwiper = new Swiper ('.swiper-container', {
-    loop: true
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
+
+  var nextBtn = $('.swiper-button-next');
+  var prevBtn = $('.swiper-button-prev');
+  var bullets = $('.swiper-pagination');
+
+  nextBtn.css('left', prevBtn.width() + 10 + bullets.width() + 10);
+  bullets.css('left', prevBtn.width() + 10);
 });

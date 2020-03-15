@@ -16,11 +16,24 @@
     &__content
       margin-left: 0
 @media screen and ( max-width: 760px ) 
+  .section
+    padding: 0
+    &-title
+      &__text-description
+        max-width: 305px
+      &__word
+        &::after
+          content: ''
+          width: 0
+          height: 0
   .row
     flex-direction: column
     align-items: center
   .col
     margin: 0 0
+  .col-50
+    margin-bottom: 34px
+    width: 100%
   .types
     &__card
       margin-bottom: 5rem
