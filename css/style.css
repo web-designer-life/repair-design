@@ -371,10 +371,13 @@ template {
   align-items: flex-start;
   justify-content: center; }
 
-.col {
+.col-30 {
   flex-basis: 32%;
   max-width: 392px;
   margin: 0 15px; }
+
+.col-50 {
+  flex-basis: 50%; }
 
 .scrollup {
   width: 40px;
