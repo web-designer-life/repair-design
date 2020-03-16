@@ -351,15 +351,15 @@ template {
   font-size: 1.285rem;
   color: #fff;
   padding: 0.5rem 0; }
-  .input::-webkit-input-placeholder {
+  .input--light::-webkit-input-placeholder {
     color: #fff; }
-  .input::-moz-placeholder {
+  .input--light::-moz-placeholder {
     color: #fff; }
-  .input:-ms-input-placeholder {
+  .input--light:-ms-input-placeholder {
     color: #fff; }
-  .input::-ms-input-placeholder {
+  .input--light::-ms-input-placeholder {
     color: #fff; }
-  .input::placeholder {
+  .input--light::placeholder {
     color: #fff; }
 
 .container {
@@ -552,6 +552,9 @@ img {
       background-color: #E3B873;
       margin-left: 8px; }
 
+.projects {
+  padding-bottom: 30rem; }
+
 .row {
   align-items: flex-start; }
 
@@ -559,7 +562,7 @@ img {
   margin: 0 100px; }
 
 .section {
-  padding: 4.28rem 0; }
+  padding-top: 4.28rem; }
   .section--dark {
     background-color: #131313;
     color: #fff; }
@@ -567,6 +570,8 @@ img {
     text-align: center; }
     .section-title--left {
       text-align: left; }
+    .section-title--light {
+      color: #fff; }
     .section-title__heading {
       text-transform: uppercase;
       font-family: 'Yeseva One', cursive;
@@ -640,6 +645,73 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: 0; }
+
+.control__section-title {
+  margin-bottom: 2.214rem;
+  margin-top: -30rem; }
+  .control__section-title .section-title--light {
+    color: #fff; }
+
+.control__video {
+  position: relative;
+  display: flex;
+  margin: auto;
+  margin-bottom: 4.428rem;
+  max-width: 58.357rem;
+  min-height: 31rem;
+  background: #131313 url("../img/video-mask.jpg") no-repeat center;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15); }
+  .control__video::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); }
+
+.control__text {
+  max-width: 40.785rem;
+  margin: auto;
+  margin-bottom: 4.285rem;
+  text-align: center;
+  font-size: 1.428rem;
+  line-height: 2.42rem; }
+  .control__text::before {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    width: 55px;
+    height: 2px;
+    background-color: #E3B873;
+    border-radius: 30px; }
+
+.control__form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 55rem;
+  margin: auto; }
+
+.control__input-group {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%; }
+
+.control__label {
+  margin-bottom: -7px; }
+
+.control__policy {
+  flex-basis: 100%;
+  margin-top: 1.2rem; }
+  .control__policy-label {
+    justify-content: center; }
+
+.control__button {
+  padding: 1.286rem 4.785rem; }
+
+.video__play {
+  position: relative;
+  margin: auto; }
 
 .types__section-title {
   margin-bottom: 31px; }
@@ -773,22 +845,24 @@ img {
     margin-bottom: 2.7rem; }
   .modal__button {
     align-self: flex-end; }
-  .modal .policy__checkbox {
-    opacity: 0;
-    visibility: hidden; }
-    .modal .policy__checkbox:checked + .policy__label::before {
-      background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
-  .modal .policy__label {
-    display: flex;
-    align-items: center; }
-    .modal .policy__label::before {
-      content: '';
-      width: 18px;
-      height: 18px;
-      border: 1px solid #E3B873;
-      border-radius: 1px;
-      cursor: pointer;
-      margin-right: 0.64rem; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
+
+.policy__label {
+  display: flex;
+  align-items: center; }
+  .policy__label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #E3B873;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-right: 0.64rem; }
 
 @media screen and (max-width: 1200px) {
   html {
@@ -809,7 +883,8 @@ img {
 
 @media screen and (max-width: 760px) {
   .section {
-    padding: 0; }
+    padding: 0;
+    padding-bottom: 30rem; }
     .section-title__text-description {
       max-width: 305px; }
     .section-title__word::after {
