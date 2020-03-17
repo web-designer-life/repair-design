@@ -931,7 +931,7 @@ img {
   .hero__scroll-down {
     display: none; } }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 500px) {
   .hero__content {
     padding-left: 0;
     padding: 1.28rem; }
@@ -944,11 +944,24 @@ img {
     display: block;
     min-width: 100%;
     margin-bottom: 1.85rem; }
-  .control__form {
-    display: flex;
-    flex-direction: column;
-    width: 100%; }
-  .control__video {
-    width: 100%;
-    height: 0;
-    height: auto; } }
+  .control {
+    background-color: #131313;
+    color: #fff; }
+    .control__form {
+      display: flex;
+      flex-direction: column; }
+    .control__input {
+      color: #fff; }
+    .control__text {
+      margin-bottom: 0; }
+    .control__input-group {
+      margin-top: 31px;
+      margin-bottom: 31px; }
+    .control__video {
+      width: 100%;
+      height: 0;
+      height: auto; }
+    .control__policy {
+      display: flex;
+      justify-content: start;
+      position: relative; } }

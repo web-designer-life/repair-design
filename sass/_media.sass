@@ -72,7 +72,7 @@
   .hero
     &__scroll-down
       display: none
-@media screen and ( max-width: 520px ) 
+@media screen and ( max-width: 500px ) 
   .hero
     &__content
       padding-left: 0
@@ -87,11 +87,23 @@
       min-width: 100%
       margin-bottom: 1.85rem
   .control
+    background-color: $dark
+    color: $light
     &__form
       display: flex
       flex-direction: column
-      width: 100%
+    &__input
+      color: $light
+    &__text
+      margin-bottom: 0
+    &__input-group
+      margin-top: 31px
+      margin-bottom: 31px
     &__video
       width: 100%
       height: 0
       height: auto
+    &__policy
+      display: flex
+      justify-content: start
+      position: relative
