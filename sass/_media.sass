@@ -18,7 +18,6 @@
 @media screen and ( max-width: 760px ) 
   .section
     padding: 0
-    padding-bottom: 30rem
     &-title
       &__text-description
         max-width: 305px
@@ -27,6 +26,8 @@
           content: ''
           width: 0
           height: 0
+  .projects
+    padding-bottom: 30rem
   .row
     flex-direction: column
     align-items: center
@@ -72,7 +73,7 @@
   .hero
     &__scroll-down
       display: none
-@media screen and ( max-width: 500px ) 
+@media screen and ( max-width: 525px ) 
   .hero
     &__content
       padding-left: 0
@@ -101,9 +102,29 @@
       margin-bottom: 31px
     &__video
       width: 100%
-      height: 0
-      height: auto
     &__policy
       display: flex
       justify-content: start
       position: relative
+    &__button
+      width: 100%
+      margin: auto
+  .form
+    &__element:nth-of-type(1)
+      order: 1
+    &__element:nth-of-type(2)
+      order: 2
+      margin-bottom: 0
+    &__element:nth-of-type(3)
+      order: 4
+    &__element:nth-of-type(4)
+      order: 3
+      margin-bottom: 62px
+@media screen and ( max-width: 380px ) 
+  .control
+    &__video
+      height: 207px
+      background: $dark url('../img/video-mask-adaptive.jpg') no-repeat center
+  .video
+    &__play
+      width: 97px
