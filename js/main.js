@@ -88,4 +88,18 @@ $(document).ready(function () {
 
   nextBtn.css('left', prevBtn.width() + 10 + bullets.width() + 10);
   bullets.css('left', prevBtn.width() + 10);
+
+  new WOW().init();
+
+  $(window).scroll(function() {
+    $('.right').each(function() {
+      var imagePos = $(this).offset().top;
+      var topOfWindow = $(window).scrollTop();
+      if (imagePos < topOfWindow + 900) {
+        $(this).addClass('animated');
+        $(this).addClass('fadeInRight');
+      }
+    });
+  });
+
 });

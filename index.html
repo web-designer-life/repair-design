@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie-edge">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
   <a href="#" class="scrollup">Наверх</a>
@@ -25,7 +26,7 @@
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-          <button class="button contacts__button button--primary" data-toggle="modal">Заказать звонок</button>
+          <button class="button contacts__button button--primary wow fadeIn" data-toggle="modal">Заказать звонок</button>
         </div>
       </div>
       <!-- /.menu -->
@@ -38,15 +39,15 @@
         <a href="#" class="instagram__link">Instagram</a>
       </div>
         <div class="hero__content">
-          <h1 class="hero__title">Турецкий ремонт в&nbsp<span class="hero__title--primary">Ростове-на-дону</span></h1>
-          <p class="hero__text">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
-          <div class="buttons">
-            <button class="button hero__button button--primary" data-toggle="modal">Раcсчитать стоимость</button>
-            <button class="button hero__button button--outline">Отправить заявку</button>
+          <h1 class="hero__title wow fadeInLeft">Турецкий ремонт в&nbsp<span class="hero__title--primary">Ростове-на-дону</span></h1>
+          <p class="hero__text wow fadeInLeft">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
+          <div class="buttons wow slideInDown">
+            <button class="button hero__button button--primary wow fadeIn" data-toggle="modal">Раcсчитать стоимость</button>
+            <button class="button hero__button button--outline wow fadeIn">Отправить заявку</button>
           </div>
         </div>
         <!-- /.hero__content -->
-      <a href="#" class="hero__scroll-down">листайте вниз</a>
+      <a href="#" data-wow-delay="3s" data-wow-duration="3s" class="hero__scroll-down wow pulse infinite">листайте вниз</a>
     </section>
     <!-- /.hero -->
     <section class="section section--dark projects">
@@ -54,7 +55,7 @@
         <div class="row section__row">
           <div class="col col-50">
             <div class="section-title section-title--left">
-              <h2 class="section-title__heading section-title__heading--primary">Завершенные <span class="section-title__word">проекты</span></h2>
+              <h2 class="section-title__heading section-title__heading--primary wow fadeInLeft">Завершенные <span class="section-title__word">проекты</span></h2>
               <!-- /.section-title__heading -->
               <p class="section-title__text-description">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
             </div>
@@ -62,7 +63,7 @@
             <!-- Slider main container -->
             <div class="swiper-container swiper-width">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper swiper-no-swiping">
+              <div class="swiper-wrapper swiper-no-swiping right">
                   <!-- Slides -->
                   <div class="swiper-slide">
                     <div class="swiper-slide__text">
@@ -128,7 +129,7 @@
           <div class="col col-50">
             <div class="swiper-container">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper swiper-no-swiping">
+              <div class="swiper-wrapper swiper-no-swiping right">
                   <!-- Slides -->
                   <div class="swiper-slide">
                     <img src="img/projects/project-1.jpg" alt="">
@@ -150,7 +151,7 @@
     </section>
     <section class="section control">
       <div class="container">
-        <div class="section-title control__section-title">
+        <div data-wow-delay="0.2s" class="section-title control__section-title wow zoomIn">
           <h2 class="section-title__heading section-title--light">Онлайн контроль</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
@@ -191,7 +192,7 @@
     <!-- /.section control -->
     <section class="section types">
       <div class="container">
-        <div class="section-title types__section-title">
+        <div data-wow-delay="0.2s" class="section-title types__section-title wow zoomIn">
           <h2 class="section-title__heading">Виды ремонта</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
@@ -202,9 +203,9 @@
         <!-- /.section-title -->
         <div class="row">
           <div class="col col-30">
-            <div class="card types__card">
+            <div data-wow-delay="0.3s" class="card types__card wow fadeInLeft">
               <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
-              <div class="card__text">
+              <div  class="card__text">
                 <h3 class="card__title">Косметический ремонт</h3>
                 <!-- /.card__title -->
                 <ul class="card__list">
@@ -233,7 +234,7 @@
           </div>
           <!-- /.col-30 -->
           <div class="col col-30">
-            <div class="card types__card">
+            <div data-wow-delay="0.2s" class="card types__card wow fadeInLeft">
               <img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Капитальный ремонт</h3>
@@ -264,7 +265,7 @@
           </div>
           <!-- /.col-30 -->
           <div class="col col-30">
-            <div class="card types__card">
+            <div data-wow-delay="0.1s" class="card types__card wow fadeInLeft">
               <img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Дизайнерский ремонт</h3>
@@ -302,7 +303,7 @@
     <!-- /.section types -->
     <section class="section design">
       <div class="container">
-        <div class="section-title design__section-title">
+        <div data-wow-delay="0.2s" class="section-title design__section-title wow zoomIn">
           <h2 class="section-title__heading">Дизайн проект</h2>
           <!-- /.section-title__heading -->
           <div class="section-title__image">
@@ -314,7 +315,7 @@
         <!-- /.section-title -->
         <div class="row">
           <div class="col col-30">
-            <div class="card design__card">
+            <div data-wow-delay="0.3s" class="card design__card wow fadeInLeft">
               <img src="img/design/design-1.jpg" alt="Минимальный" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Минимальный</h3>
@@ -339,7 +340,7 @@
           </div>
           <!-- /.col-30 -->
           <div class="col col-30">
-            <div class="card design__card">
+            <div data-wow-delay="0.2s" class="card design__card wow fadeInLeft">
               <img src="img/design/design-2.jpg" alt="Стандартный" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Стандартный</h3>
@@ -370,7 +371,7 @@
           </div>
           <!-- /.col-30 -->
           <div class="col col-30">
-            <div class="card design__card">
+            <div data-wow-delay="0.1s" class="card design__card wow fadeInLeft">
               <img src="img/design/design-3.jpg" alt="Полный" class="card__image">
               <div class="card__text">
                 <h3 class="card__title">Полный</h3>
@@ -442,6 +443,7 @@
   <!-- /.modal -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

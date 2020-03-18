@@ -509,6 +509,9 @@ img {
     text-decoration: none;
     color: #fff;
     z-index: 9; }
+    .hero__scroll-down:hover {
+      -webkit-animation-play-state: paused;
+      animation-play-state: paused; }
     .hero__scroll-down::after {
       content: '';
       background: url("../img/arrow-down.svg") no-repeat center;
@@ -687,7 +690,9 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   max-width: 55rem;
-  margin: auto; }
+  margin: auto;
+  -webkit-animation: opacity 3s;
+  animation: opacity 3s; }
 
 .control__input-group {
   display: flex;
@@ -894,6 +899,18 @@ img {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+
+@-webkit-keyframes 'opacity' {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes 'opacity' {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 @media screen and (max-width: 1200px) {
   html {
