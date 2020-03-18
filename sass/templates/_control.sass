@@ -44,8 +44,14 @@
     flex-direction: column
     flex-basis: 30%
   &__label
+    color: rgba(#363636, 0.5)
     margin-bottom: -7px
+  &__input
+    &::placeholder
+      color:#363636
   &__policy
+    display: flex
+    justify-content: center
     flex-basis: 100%
     margin-top: 1.2rem
     &__checkbox
@@ -59,6 +65,7 @@
     &__label
       display: flex
       align-items: center
+      color: #363636
       &::before
         content: ''
         width: 18px

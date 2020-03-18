@@ -28,6 +28,10 @@
           height: 0
   .projects
     padding-bottom: 30rem
+  .types
+    padding-top: 82px
+  .design
+    padding-top: 82px
   .row
     flex-direction: column
     align-items: center
@@ -94,7 +98,14 @@
       display: flex
       flex-direction: column
     &__input
-      color: $light
+      border-bottom: 1px solid rgba($light, 0.3)
+      &::placeholder
+        color: $light
+    &__label
+        color: rgba($light, 0.5)
+    &__policy
+      &__label
+        color: $light
     &__text
       margin-bottom: 0
     &__input-group
@@ -107,6 +118,8 @@
       justify-content: start
       position: relative
     &__button
+      position: relative
+      top: 22px
       width: 100%
       margin: auto
   .form
@@ -119,7 +132,7 @@
       order: 4
     &__element:nth-of-type(4)
       order: 3
-      margin-bottom: 62px
+      margin-bottom: 40px
 @media screen and ( max-width: 380px ) 
   .control
     &__video
