@@ -55,6 +55,39 @@
   .section-title
     &__text
       color: $light
+  .footer
+    padding-top: 22.5px
+    background: $dark
+    &__container
+      margin-bottom: 30px
+    &__title
+      margin-bottom: 60px
+    &__input
+      border-bottom: 1px solid rgba($light, 0.3)
+      &-group
+        display: flex
+        flex-direction: column
+        flex-basis: 100%
+        margin-bottom: 2rem
+        margin-bottom: 60px
+        &--full-width
+          flex-basis: 100%
+          margin-bottom: 2rem
+        &:last-of-type
+          margin-bottom: 21px
+    &__wrap
+      padding: 0
+      background-color: $dark
+      margin-top: 0
+    &__policy
+      display: flex
+      justify-content: flex-start
+      margin-bottom: 67px
+    &__button
+      width: 100%
+    &__menu
+      visibility: hidden
+      padding: 0
 @media screen and ( max-width: 570px ) 
   .contacts
     &__phone
@@ -102,7 +135,7 @@
       &::placeholder
         color: $light
     &__label
-        color: rgba($light, 0.5)
+      color: rgba($light, 0.5)
     &__policy
       &__label
         color: $light
@@ -115,7 +148,7 @@
       width: 100%
     &__policy
       display: flex
-      justify-content: start
+      justify-content: flex-start
       position: relative
     &__button
       position: relative
