@@ -41,15 +41,19 @@
     display: flex
     flex-direction: column
   &__input
-    margin-bottom: 3.438rem
-    &:last-of-type
-      margin-bottom: 1rem
+    &-group
+      display: flex
+      flex-direction: column
+      margin-bottom: 3.438rem
+      &:nth-of-type(3)
+        margin-bottom: 16px
   &__policy
     margin-bottom: 2.7rem
   &__button
     align-self: flex-end
 .policy
   &__checkbox
+    position: absolute
     opacity: 0
     visibility: hidden
     &:checked +

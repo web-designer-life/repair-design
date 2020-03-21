@@ -102,4 +102,16 @@ $(document).ready(function () {
     });
   });
 
+  // Валидация формы
+  $('.modal__form').validate({
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }
+  });
 });
