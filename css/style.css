@@ -949,6 +949,7 @@ img {
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
+    padding: 19px 46px;
     align-self: flex-end; }
 
 .policy__checkbox {
