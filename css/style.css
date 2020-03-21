@@ -929,7 +929,7 @@ img {
       padding: 1rem; }
 
 .footer {
-  background: #131313 url("..//img/footer-bg.jpg") no-repeat center/cover;
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
   padding-top: 5rem; }
   .footer__wrap {
     background-color: #181818;
@@ -992,6 +992,32 @@ img {
   .footer__menu {
     background-color: #131313;
     padding: 4.285rem 0; }
+  .footer__information {
+    font-family: 'Yeseva One';
+    max-width: 460px;
+    font-size: 1.428rem;
+    line-height: 2rem;
+    margin: auto;
+    margin-top: 3.714rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #E3B873; }
+  .footer__icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.823rem;
+    margin-bottom: 3.09rem; }
+    .footer__icons__image {
+      width: 28px;
+      height: 28px;
+      margin: 0 0.536rem; }
+  .footer__map {
+    margin: auto;
+    margin-bottom: 4.714rem;
+    max-width: 925px;
+    min-height: 425px; }
 
 .modal {
   position: fixed;
@@ -1134,6 +1160,8 @@ img {
   .staff {
     background-color: #131313;
     color: #fff; }
+    .staff__section-title__text {
+      font-size: 1.07rem; }
   .footer {
     padding-top: 22.5px;
     background: #131313; }

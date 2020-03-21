@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=63fd3192-612b-48d4-bf34-5f1f7b679660&lang=ru_RU" type="text/javascript"></script>
   <title>Document</title>
   <a href="#" class="scrollup">Наверх</a>
 </head>
@@ -168,12 +169,12 @@
           На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
         </p>
         <form action="#" class="form control__form">
-          <div class="form__element control__input-group">
-            <label for="user-name" class="label form__label control__label">Имя</label>
+          <div for="user-name" class="form__element control__input-group">
+            <label class="label form__label control__label">Имя</label>
             <input name="userName" type="text" class="input form__input control__input" autocomplete="off" id="user-name" placeholder="Как вас зовут:">
           </div>
-          <div class="form__element control__input-group">
-            <label for="user-phone" class="label form__label control__label">Телефон</label>
+          <div for="user-phone" class="form__element control__input-group">
+            <label class="label form__label control__label">Телефон</label>
             <input name="userPhone" type="tel" class="input form__input control__input" autocomplete="off" id="user-phone" placeholder="Ваш номер телефона:">
           </div>
           <div class="form__element">
@@ -434,7 +435,7 @@
             <div data-wow-delay="0.3s" class="card staff__card wow fadeInLeft">
               <div class="staff__card__content">
                 <div class="staff__card__icon">
-                  <img src="img/staff/icon-1.svg" alt="">
+                  <img src="img/staff/icon-1.svg" alt="icon-1">
                 </div>
                 <div class="staff__card__img">
                   <img src="img/staff/staff-1.jpg" alt="Алексей Колмаков" class="staff__card__image card__image">
@@ -456,7 +457,7 @@
             <div data-wow-delay="0.2s" class="card staff__card wow fadeInLeft">
               <div class="staff__card__content">
                 <div class="staff__card__icon">
-                  <img src="img/staff/icon-2.svg" alt="">
+                  <img src="img/staff/icon-2.svg" alt="icon-2">
                 </div>
                 <div class="staff__card__img">
                   <img src="img/staff/staff-2.jpg" alt="Алиса Сухорукова" class="card__image">
@@ -478,7 +479,7 @@
             <div data-wow-delay="0.1s" class="card staff__card wow fadeInLeft">
               <div class="staff__card__content">
                 <div class="staff__card__icon">
-                  <img src="img/staff/icon-3.svg" alt="">
+                  <img src="img/staff/icon-3.svg" alt="icon-3">
                 </div>
                 <div class="staff__card__img">
                   <img src="img/staff/staff-3.jpg" alt="Давид Волынев" class="card__image">
@@ -509,16 +510,16 @@
       <div class="footer__wrap">
         <div class="footer__title">Остались вопросы?</div>
         <form action="#" class="form footer__form">
-          <div class="input-group footer__input-group">
-            <label for="user-name" class="label form__label label--light">Имя</label>
+          <div for="user-name" class="input-group footer__input-group">
+            <label class="label form__label label--light">Имя</label>
             <input name="userName" type="text" class="input form__input footer__input input--light" id="user-name" autocomplete="off" placeholder="Как вас зовут:">
           </div>
-          <div class="input-group footer__input-group">
-            <label for="user-phone" class="label form__label label--light">Телефон</label>
+          <div for="user-phone" class="input-group footer__input-group">
+            <label class="label form__label label--light">Телефон</label>
             <input name="userPhone" type="tel" class="input form__input footer__input input--light" id="user-phone" autocomplete="off" placeholder="Ваш номер телефона:">
           </div>
-          <div class="input-group footer__input-group footer__input-group--full-width">
-            <label for="user-question" class="label form__label label--light">Вопрос</label>
+          <div for="user-question" class="input-group footer__input-group footer__input-group--full-width">
+            <label class="label form__label label--light">Вопрос</label>
             <input name="userQuestion" type="text" class="input form__input footer__input input--light" id="user-question" autocomplete="off" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
@@ -531,6 +532,20 @@
         <!-- /.form footer__form -->
       </div>
       <!-- /.footer__wrap -->
+      <div class="information footer__information">
+        <p>Ростов на дону, Торговый центр Plaza Прямой телефон +7 (999) 768 32 99</p>
+        <div class="footer__icons">
+          <div class="footer__icons__image">
+            <img src="img/footer-icon-1.svg" alt="Email">
+          </div>
+          <div class="footer__icons__image">
+            <img src="img/footer-icon-2.svg" alt="Instagram">
+          </div>
+        </div>
+      </div>
+      <div class="map footer__map" id="map">
+        <!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af449d65f52ccef1c7f568047f05d18df9379fb971fdbaa11f83bc706a92cbb1b&amp;width=100%25&amp;height=465&amp;lang=ru_RU&amp;scroll=false"></script> -->
+      </div>
     </div>
     <div class="footer__menu">
       <div class="container">
@@ -558,16 +573,16 @@
       <button class="modal__close"></button>
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="#" class="form modal__form">
-        <div class="input-group modal__input-group">
-          <label for="user-name" class="label form__label label--light">Имя</label>
+        <div for="user-name" class="input-group modal__input-group">
+          <label class="label form__label label--light">Имя</label>
           <input type="text" name="userName" autocomplete="off" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
         </div>
-        <div class="input-group modal__input-group">
-          <label for="user-phone" class="label form__label label--light">Телефон</label>
+        <div for="user-phone" class="input-group modal__input-group">
+          <label class="label form__label label--light">Телефон</label>
           <input type="tel" name="userPhone" autocomplete="off" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
         </div>
-        <div class="input-group modal__input-group">
-          <label for="user-email" class="label form__label label--light">Email</label>
+        <div for="user-email" class="input-group modal__input-group">
+          <label class="label form__label label--light">Email</label>
           <input type="email" name="userEmail" autocomplete="off" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
         </div>
         <div class="policy modal__policy">
