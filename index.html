@@ -170,11 +170,11 @@
         <form action="#" class="form control__form">
           <div class="form__element control__input-group">
             <label for="user-name" class="label form__label control__label">Имя</label>
-            <input type="text" class="input form__input control__input" id="user-name" placeholder="Как вас зовут:">
+            <input name="userName" type="text" class="input form__input control__input" autocomplete="off" id="user-name" placeholder="Как вас зовут:">
           </div>
           <div class="form__element control__input-group">
             <label for="user-phone" class="label form__label control__label">Телефон</label>
-            <input type="tel" class="input form__input control__input" id="user-phone" placeholder="Ваш номер телефона:">
+            <input name="userPhone" type="tel" class="input form__input control__input" autocomplete="off" id="user-phone" placeholder="Ваш номер телефона:">
           </div>
           <div class="form__element">
             <button class="button button--primary control__button">Отправить</button>
@@ -417,6 +417,92 @@
       <!-- /.container -->
     </section>
     <!-- /.section design -->
+    <section class="section staff">
+      <div class="container">
+        <div data-wow-delay="0.2s" class="section-title staff__section-title wow zoomIn">
+          <h2 class="section-title__heading staff__section-title__heading">Наша команда</h2>
+          <!-- /.section-title__heading -->
+          <div class="section-title__image">
+            <img src="img/staff.svg" alt="staff">
+          </div>
+          <!-- /.section-title__image -->
+          <div class="staff__section-title__text">Наша команда помогла стать счастливее более чем 500 семьям, и мы не собираемся останавливаться</div>
+        </div>
+        <!-- /.section-title -->
+        <div class="row">
+          <div class="col col-30 staff__col">
+            <div data-wow-delay="0.3s" class="card staff__card wow fadeInLeft">
+              <div class="staff__card__content">
+                <div class="staff__card__icon">
+                  <img src="img/staff/icon-1.svg" alt="">
+                </div>
+                <div class="staff__card__img">
+                  <img src="img/staff/staff-1.jpg" alt="Алексей Колмаков" class="staff__card__image card__image">
+                  <div class="staff__card__text">
+                    <h3 class="staff__card__title">Алексей Колмаков</h3>
+                    <!-- /.card__title -->
+                    <p class="staff__card__post">Проектный менеджер</p>
+                    <strong class="staff__card__experience">Опыт работы 8 лет</strong>
+                    <!-- /.card__experience -->
+                  </div>
+                  <!-- /.card__text -->
+                </div>
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col-30 -->
+          <div class="col col-30 staff__col">
+            <div data-wow-delay="0.2s" class="card staff__card wow fadeInLeft">
+              <div class="staff__card__content">
+                <div class="staff__card__icon">
+                  <img src="img/staff/icon-2.svg" alt="">
+                </div>
+                <div class="staff__card__img">
+                  <img src="img/staff/staff-2.jpg" alt="Алиса Сухорукова" class="card__image">
+                  <div class="staff__card__text">
+                    <h3 class="staff__card__title">Алиса Сухорукова</h3>
+                    <!-- /.card__title -->
+                    <p class="staff__card__post">Дизайнер</p>
+                    <strong class="staff__card__experience">Опыт работы 6 лет</strong>
+                    <!-- /.card__experience -->
+                  </div>
+                  <!-- /.card__text -->
+                </div>
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col-30 -->
+          <div class="col col-30 staff__col">
+            <div data-wow-delay="0.1s" class="card staff__card wow fadeInLeft">
+              <div class="staff__card__content">
+                <div class="staff__card__icon">
+                  <img src="img/staff/icon-3.svg" alt="">
+                </div>
+                <div class="staff__card__img">
+                  <img src="img/staff/staff-3.jpg" alt="Давид Волынев" class="card__image">
+                  <div class="staff__card__text">
+                    <h3 class="staff__card__title">Давид Волынев</h3>
+                    <!-- /.card__title -->
+                    <p class="staff__card__post">Бригадир</p>
+                    <strong class="staff__card__experience">Опыт работы 7 лет</strong>
+                    <!-- /.card__experience -->
+                  </div>
+                  <!-- /.card__text -->
+                </div>
+              </div>
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col-30 -->
+        </div>
+        <!-- /.row -->
+        <div data-wow-delay="0.2s" class="staff__section-title__description wow zoomIn">Каждый сотрудник нашей компании является квалифицированным штатным специалистом с опытом работы от 6 лет. У нас нет  гастарбайтеров, каждый сотрудник выполняет работу, соответствующую его специальности.</div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.section staff -->
   </main>
   <footer class="footer section section--dark">
     <div class="container footer__container">
@@ -425,15 +511,15 @@
         <form action="#" class="form footer__form">
           <div class="input-group footer__input-group">
             <label for="user-name" class="label form__label label--light">Имя</label>
-            <input type="text" class="input form__input footer__input input--light" id="user-name" placeholder="Как вас зовут:">
+            <input name="userName" type="text" class="input form__input footer__input input--light" id="user-name" autocomplete="off" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group">
             <label for="user-phone" class="label form__label label--light">Телефон</label>
-            <input type="tel" class="input form__input footer__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+            <input name="userPhone" type="tel" class="input form__input footer__input input--light" id="user-phone" autocomplete="off" placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
             <label for="user-question" class="label form__label label--light">Вопрос</label>
-            <input type="text" class="input form__input footer__input input--light" id="user-question" placeholder="Я хочу спросить:">
+            <input name="userQuestion" type="text" class="input form__input footer__input input--light" id="user-question" autocomplete="off" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
             <input type="checkbox" class="footer__policy__checkbox" name="footer__policy__checkbox" id="footer__policy__checkbox" checked>
@@ -474,15 +560,15 @@
       <form action="#" class="form modal__form">
         <div class="input-group modal__input-group">
           <label for="user-name" class="label form__label label--light">Имя</label>
-          <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
+          <input type="text" name="userName" autocomplete="off" class="input form__input modal__input input--light" id="user-name" placeholder="Как вас зовут:">
         </div>
         <div class="input-group modal__input-group">
           <label for="user-phone" class="label form__label label--light">Телефон</label>
-          <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
+          <input type="tel" name="userPhone" autocomplete="off" class="input form__input modal__input input--light" id="user-phone" placeholder="Ваш номер телефона:">
         </div>
         <div class="input-group modal__input-group">
           <label for="user-email" class="label form__label label--light">Email</label>
-          <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
+          <input type="email" name="userEmail" autocomplete="off" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
         </div>
         <div class="policy modal__policy">
           <input type="checkbox" class="policy__checkbox" name="policy__checkbox" id="policy__checkbox" checked>
@@ -500,6 +586,7 @@
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
