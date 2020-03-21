@@ -96,7 +96,7 @@ $(document).ready(function () {
       var imagePos = $(this).offset().top;
       var topOfWindow = $(window).scrollTop();
       if (imagePos < topOfWindow + 900) {
-        $(this).addClass('animated');
+        $(this).addClass('wow');
         $(this).addClass('fadeInRight');
       }
     });

@@ -1017,7 +1017,7 @@ img {
     margin: auto;
     margin-bottom: 4.714rem;
     max-width: 925px;
-    min-height: 425px; }
+    height: 425px; }
 
 .modal {
   position: fixed;
@@ -1165,8 +1165,6 @@ img {
   .footer {
     padding-top: 22.5px;
     background: #131313; }
-    .footer__container {
-      margin-bottom: 30px; }
     .footer__title {
       margin-bottom: 60px; }
     .footer__input {
@@ -1193,8 +1191,29 @@ img {
     .footer__button {
       width: 100%; }
     .footer__menu {
-      visibility: hidden;
-      padding: 0; } }
+      display: none;
+      padding: 0; }
+    .footer__information {
+      max-width: 313px;
+      font-size: 18px; }
+      .footer__information__description {
+        margin-top: 42px;
+        margin-bottom: 24px; }
+    .footer__map {
+      max-height: 255px; }
+    .footer__location {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      .footer__location--first {
+        margin: 0;
+        order: 2; }
+      .footer__location--last {
+        width: 100%;
+        margin: 0;
+        order: 1; }
+    .footer__icons {
+      margin-bottom: 24px; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
