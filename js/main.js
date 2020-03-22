@@ -129,6 +129,17 @@ $(document).ready(function () {
         required: "Заполните поле: Email",
         email: "Введите корректный email (формат: name@domain.com)"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          console.log('Ajax сработал. Ответ сервера: ' + response);
+          $(form)[0].reset();
+        }
+      });
     }
   });
 
