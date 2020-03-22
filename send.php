@@ -32,7 +32,10 @@ try {
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Новая заявка сайта';
-    $mail->Body    = "Имя пользователя: ${userName}. Телефон: ${userPhone}. Почтовый ящик: ${userEmail}.";
+    $mail->Body    = "Имя пользователя: ${userName};
+                      Телефон: ${userPhone};
+                      Почтовый ящик: ${userEmail};
+                      Вопрос: ${userQuestion}.";
 
     $mail->send();
     header('Location: thanks.html');
