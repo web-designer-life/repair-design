@@ -1100,7 +1100,9 @@ img {
     margin: auto;
     margin-bottom: 4.714rem;
     max-width: 925px;
-    height: 425px; }
+    height: 425px;
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1); }
 
 .modal {
   position: fixed;
