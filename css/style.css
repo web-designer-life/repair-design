@@ -1162,8 +1162,10 @@ img {
     color: #fff; }
     .staff__section-title__text {
       font-size: 1.07rem; }
+    .staff__section-title__description {
+      display: none; }
   .footer {
-    padding-top: 22.5px;
+    padding-top: 98.5px;
     background: #131313; }
     .footer__title {
       margin-bottom: 60px; }
