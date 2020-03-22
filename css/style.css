@@ -982,7 +982,8 @@ img {
   position: absolute;
   left: 0;
   bottom: -1.79rem;
-  color: #fff; }
+  color: #fff;
+  box-shadow: 5px 5px 20px rgba(227, 184, 115, 0.5); }
 
 .review__area {
   display: flex;
