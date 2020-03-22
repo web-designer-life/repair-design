@@ -185,7 +185,7 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
           $(form)[0].reset();
         },
         error: function(response) {
@@ -219,7 +219,7 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
+          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
           $(form)[0].reset();
         },
         error: function(response) {
