@@ -71,15 +71,14 @@ function fonts(done) {
 }
 
 function imagemin(done) {
-  src('img/**/**')
-    .pipe(tinypng({key: 'nzQbb25TzCC60XT5B61mDmZK5ym7XLC5'}))
-    .pipe(dest('dist/img'));
-  src('img/**/*.svg')
-    .pipe(tinypng({key: 'nzQbb25TzCC60XT5B61mDmZK5ym7XLC5'}))
-    .pipe(dest('dist/img'));
+  src('img/**/*.{png,jpg,jpeg}')
+    .pipe(tinypng({
+      key: 'nzQbb25TzCC60XT5B61mDmZK5ym7XLC5',
+      }))
+    .pipe(dest('dist/img/'));
+  src('img/**/**.{svg,ico}')
+    .pipe(dest('dist/img/'));
   done();
 }
-
-
 exports.serve = bs;
 exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin);
