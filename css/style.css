@@ -411,6 +411,9 @@ body {
 img {
   max-width: 100%; }
 
+.section__title__heading {
+  font-weight: normal; }
+
 .header {
   position: fixed;
   left: 0;
