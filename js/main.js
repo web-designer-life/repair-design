@@ -252,7 +252,7 @@ $(document).ready(function () {
         '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
     ),
 
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+    myPlacemark = new Placemark(myMap.getCenter(), {
         hintContent: 'Наш офис',
         balloonContent: 'Вход со двора'
     }, {
