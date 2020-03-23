@@ -105,6 +105,7 @@ $(document).ready(function () {
   // Валидация формы
   $('.modal__form').validate({
     errorClass: "invalid",
+    ignore: ":disabled",
     rules: {
       userName: {
         required: true,
@@ -118,6 +119,7 @@ $(document).ready(function () {
         email: true
       }
     }, // сообщения
+    errorElement: 'div',
     messages: {
       userName: {
         required: "Заполните поле: Имя",
@@ -168,6 +170,7 @@ $(document).ready(function () {
         required: true
       }
     }, // сообщения
+    errorElement: 'div',
     messages: {
       userName: {
         required: "Заполните поле: Имя",
@@ -205,6 +208,7 @@ $(document).ready(function () {
       },
       userPhone: "required"
     }, // сообщения
+    errorElement: 'div',
     messages: {
       userName: {
         required: "Заполните поле: Имя",

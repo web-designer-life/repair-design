@@ -362,7 +362,7 @@ template {
   .input--light::placeholder {
     color: #fff; }
 
-label.invalid {
+div.invalid {
   color: tomato; }
 
 input.invalid {
