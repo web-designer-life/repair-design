@@ -240,8 +240,8 @@ $(document).ready(function () {
   ymaps.ready(function () {
     var myMap = new ymaps.Map('map', {
             center: [47.244729, 39.723187],
-            controls: [],
-            zoom: 17
+            zoom: 17,
+            controls: ["zoomControl"]
         }, {
             searchControlProvider: 'yandex#search',
             suppressMapOpenBlock: true
@@ -269,7 +269,7 @@ $(document).ready(function () {
     });
 
     myMap.behaviors
-      .disable(['drag', 'rightMouseButtonMagnifier']);
+      .disable(['drag', 'rightMouseButtonMagnifier', 'scrollZoom']);
       
     myMap.geoObjects
       .add(myPlacemark);
