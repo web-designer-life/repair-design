@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie-edge">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=63fd3192-612b-48d4-bf34-5f1f7b679660&lang=ru_RU" type="text/javascript"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=63fd3192-612b-48d4-bf34-5f1f7b679660&lang=ru_RU"></script>
   <title>Repair Design</title>
-  
-  <a href="#" class="scrollup">Наверх</a>
 </head>
 <body>
   <header class="header">
@@ -42,7 +40,9 @@
         <a href="#" class="instagram__link">Instagram</a>
       </div>
         <div class="hero__content">
-          <h1 class="hero__title wow fadeInLeft">Турецкий ремонт в&nbsp<span class="hero__title--primary">Ростове-на-дону</span></h1>
+          <h1 class="hero__title wow fadeInLeft">"Турецкий ремонт в&nbsp;"
+            <span class="hero__title--primary">Ростове-на-дону</span>
+          </h1>
           <p class="hero__text wow fadeInLeft">Получите готовый ремонт под ключ в срок с экономией рабочего времени до 45 дней и 20% от стоимости материалов за счет организации работы</p>
           <div class="buttons wow slideInDown">
             <button class="button hero__button button--primary wow fadeIn" data-toggle="modal">Раcсчитать стоимость</button>
@@ -172,11 +172,11 @@
         </p>
         <form action="send.php" method="POST" class="form control__form">
           <div class="form__element control__input-group">
-            <label for="user-name" class="label form__label control__label">Имя</label>
+            <label class="label form__label control__label">Имя</label>
             <input name="userName" type="text" class="input form__input control__input" autocomplete="off" id="control-user-name" placeholder="Как вас зовут:">
           </div>
           <div class="form__element control__input-group">
-            <label for="user-phone" class="label form__label control__label">Телефон</label>
+            <label class="label form__label control__label">Телефон</label>
             <input name="userPhone" type="tel" class="input form__input control__input" autocomplete="off" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <div class="form__element">
@@ -610,15 +610,15 @@
         <div class="footer__title">Остались вопросы?</div>
         <form action="send.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
-            <label for="user-name" class="label form__label label--light">Имя</label>
+            <label class="label form__label label--light">Имя</label>
             <input name="userName" type="text" class="input form__input footer__input input--light" id="footer-user-name" autocomplete="off" placeholder="Как вас зовут:">
           </div>
           <div class="input-group footer__input-group">
-            <label for="user-phone" class="label form__label label--light">Телефон</label>
+            <label class="label form__label label--light">Телефон</label>
             <input name="userPhone" type="tel" class="input form__input footer__input input--light" id="footer-user-phone" autocomplete="off" placeholder="Ваш номер телефона:">
           </div>
           <div class="input-group footer__input-group footer__input-group--full-width">
-            <label for="user-question" class="label form__label label--light">Вопрос</label>
+            <label class="label form__label label--light">Вопрос</label>
             <input name="userQuestion" type="text" class="input form__input footer__input input--light" id="user-question" autocomplete="off" placeholder="Я хочу спросить:">
           </div>
           <div class="policy footer__policy">
@@ -679,15 +679,15 @@
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
       <form action="send.php" method="POST" class="form modal__form">
         <div class="input-group modal__input-group">
-          <label for="user-name" class="label form__label label--light">Имя</label>
+          <label class="label form__label label--light">Имя</label>
           <input type="text" name="userName" autocomplete="off" class="input form__input modal__input input--light" id="modal-user-name" placeholder="Как вас зовут:">
         </div>
         <div class="input-group modal__input-group">
-          <label for="user-phone" class="label form__label label--light">Телефон</label>
+          <label class="label form__label label--light">Телефон</label>
           <input type="tel" name="userPhone" autocomplete="off" class="input form__input modal__input input--light" id="modal-user-phone" placeholder="Ваш номер телефона:">
         </div>
         <div class="input-group modal__input-group">
-          <label for="user-email" class="label form__label label--light">Email</label>
+          <label class="label form__label label--light">Email</label>
           <input type="email" name="userEmail" autocomplete="off" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email:">
         </div>
         <div class="policy modal__policy">
@@ -702,6 +702,7 @@
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
+  <a href="#" class="scrollup">Наверх</a>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/wow.min.js"></script>
