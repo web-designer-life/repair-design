@@ -235,43 +235,108 @@ $(document).ready(function () {
 
   // маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
-  
-  // создание яндекс карты
-  ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [47.244729, 39.723187],
-            zoom: 17,
-            controls: ["zoomControl"]
-        }, {
-            searchControlProvider: 'yandex#search',
-            suppressMapOpenBlock: true
-        }),
 
-    // Создаём макет содержимого.
-    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-    ),
+  var spinner = $('.map-container').children('.loader');
+  var check_if_load = false;
+  var myMapTemp, myPlacemarkTemp;
 
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-        hintContent: 'Наш офис',
-        balloonContent: 'Вход со двора'
-    }, {
-        // Опции.
-        // Необходимо указать данный тип макета.
-        iconLayout: 'default#image',
-        // Своё изображение иконки метки.
-        iconImageHref: 'img/marker.png',
-        // Размеры метки.
-        iconImageSize: [32, 32],
-        // Смещение левого верхнего угла иконки относительно
-        // её "ножки" (точки привязки).
-        iconImageOffset: [-5, -38]
+  function init() {
+    var myMapTemp = new ymaps.Map("map", {
+      center: [47.244729, 39.723187], 
+      zoom: 17, 
+      controls: ['zoomControl'] 
     });
+    var myPlacemarkTemp = new ymaps.Placemark([47.244729, 39.723187], {
+      balloonContent: "офис 2112",
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/map-mark.png',
+      iconImageSize: [32, 32],
+      iconImageOffset: [-16, -32],
+    });
+    myMapTemp.behaviors.disable('scrollZoom');
+    myMapTemp.geoObjects.add(myPlacemarkTemp);
 
-    myMap.behaviors
-      .disable(['drag', 'rightMouseButtonMagnifier', 'scrollZoom']);
-      
-    myMap.geoObjects
-      .add(myPlacemark);
+    var layer = myMapTemp.layers.get(0).get(0);
+    waitForTilesLoad(layer).then(function () {
+      spinner.removeClass('is-active');
+    });
+  }
+
+  function waitForTilesLoad(layer) {
+    return new ymaps.vow.Promise(function (resolve, reject) {
+      var tc = getTileContainer(layer),
+        readyAll = true;
+      tc.tiles.each(function (tile, number) {
+        if (!tile.isReady()) {
+          readyAll = false;
+        }
+      });
+      if (readyAll) {
+        resolve();
+      } else {
+        tc.events.once("ready", function () {
+          resolve();
+        });
+      }
+    });
+  }
+
+  function getTileContainer(layer) {
+    for (var k in layer) {
+      if (layer.hasOwnProperty(k)) {
+        if (
+          layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer ||
+          layer[k] instanceof ymaps.layer.tileContainer.DomContainer
+        ) {
+          return layer[k];
+        }
+      }
+    }
+    return null;
+  }
+
+  function loadScript(url, callback) {
+    var script = document.createElement("script");
+    if (script.readyState) { // IE
+      script.onreadystatechange = function () {
+        if (script.readyState == "loaded" ||
+          script.readyState == "complete") {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {
+      script.onload = function () {
+        callback();
+      };
+    }
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+  var ymap = function () {
+    $('.map-container').mouseenter(function () {
+      if (!check_if_load) {
+        check_if_load = true;
+        spinner.addClass('is-active');
+        loadScript("https://api-maps.yandex.ru/2.1/?apikey=413c87fc-f285-4212-abc8-c324c98ec8c8&lang=ru_RU&amp;loadByRequire=1", function () {
+          ymaps.load(init);
+        });
+      }
+    });
+  };
+
+  $(function () {
+    ymap();
   });
+
+  $(function () {
+    $('ul.stylisation__list').on('click', 'li:not(.active)', function () {
+      $(this).addClass('active').siblings().removeClass('active');
+      $('[data-tab-1]').find('div.tabs__content').removeClass('tabs--active').eq($(this).index()).addClass('tabs--active');
+      $('[data-tab-2]').find('div.tabs__content').removeClass('tabs--active').eq($(this).index()).addClass('tabs--active');
+    });
+  });
+
 });
