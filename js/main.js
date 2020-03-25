@@ -66,7 +66,19 @@ $(document).ready(function () {
   });
   
   $('.scrollup').click(function(){
-  $("html, body").animate({ scrollTop: 0 }, 600);
+  $("html, body").animate({ scrollTop: 0 }, 1500);
+  return false;
+  });
+
+  $(".menu").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+    
+  $('.hero__scroll-down').click(function(){
+  $("html, body").animate({ scrollTop: 9999 }, 1500);
   return false;
   });
 

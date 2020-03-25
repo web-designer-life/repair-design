@@ -338,6 +338,10 @@ template {
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff; }
+  .button:active, .button:focus {
+    outline: none; }
+  .button::-moz-focus-inner {
+    border: 0; }
 
 .label {
   font-size: 1.07rem; }
@@ -350,7 +354,8 @@ template {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
   color: #fff;
-  padding: 0.5rem 0; }
+  padding: 0.5rem 0;
+  outline: none; }
   .input--light::-webkit-input-placeholder {
     color: #fff; }
   .input--light::-moz-placeholder {
