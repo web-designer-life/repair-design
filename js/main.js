@@ -117,7 +117,8 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      policyCheckbox: "required",
     }, // сообщения
     errorElement: 'div',
     messages: {
@@ -130,7 +131,8 @@ $(document).ready(function () {
       userEmail: {
         required: "Заполните поле: Email",
         email: "Введите корректный email (формат: name@domain.com)"
-      }
+      },
+      policyCheckbox: ""
     },
     submitHandler: function(form) {
       $.ajax({
@@ -166,9 +168,8 @@ $(document).ready(function () {
       },
       userPhone: "required",
       // правило-объект (блок)
-      userQuestion: {
-        required: true
-      }
+      userQuestion: "required",
+      policyCheckbox: "required"
     }, // сообщения
     errorElement: 'div',
     messages: {
@@ -178,9 +179,8 @@ $(document).ready(function () {
         maxlength: "Имя может иметь максимум 15 букв"
       },
       userPhone: "Заполните поле: Телефон",
-      userQuestion: {
-        required: "Заполните поле: Вопрос"
-      }
+      userQuestion: "Заполните поле: Вопрос",
+      policyCheckbox: ""
     },
     submitHandler: function(form) {
       $.ajax({
@@ -206,7 +206,8 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required"
+      userPhone: "required",
+      policyCheckbox: "required"
     }, // сообщения
     errorElement: 'div',
     messages: {
@@ -215,7 +216,8 @@ $(document).ready(function () {
         minlength: "Имя должно быть не короче 2 букв",
         maxlength: "Имя может иметь максимум 15 букв"
       },
-      userPhone: "Заполните поле: Телефон"
+      userPhone: "Заполните поле: Телефон",
+      policyCheckbox: ""
     },
     submitHandler: function(form) {
       $.ajax({
