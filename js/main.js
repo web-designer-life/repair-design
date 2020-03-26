@@ -162,10 +162,10 @@ $(document).ready(function () {
           $('.modal__title').css('align-items', 'center');
           $('.modal__title').css('justify-content', 'center');
           $('.modal-success__link').css('color', '#E3B873');
+          ym(61354918, 'reachGoal', 'form'); return true;
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);
-          ym(61354918, 'reachGoal', 'form'); return true;;
         }
       });
     }
