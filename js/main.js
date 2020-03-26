@@ -165,6 +165,7 @@ $(document).ready(function () {
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);
+          ym(61354918, 'reachGoal', 'form'); return true;;
         }
       });
     }
