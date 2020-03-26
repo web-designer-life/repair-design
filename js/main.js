@@ -31,12 +31,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 $(document).ready(function () {
   var modal = $('.modal'),
+      success = $('.success'),
       modalBtn = $('[data-toggle=modal]'),
       closeBtn = $('.modal__close'),
+      successBtn = $('[data-toggle=success]'),
+      close = $('.success__close'),
       input = $('.modal input[type=text]'),
       switchModal = function() {
         modal.toggleClass('modal--visible'),
         input.focus();   
+      },
+      switchSuccess = function() {
+        success.toggleClass('success--visible');
       };
 
   modalBtn.on('click', switchModal);
@@ -54,6 +60,24 @@ $(document).ready(function () {
   modal.on('click', function (event) {
     if (modal.has(event.target).length == 0) {
       modal.toggleClass('modal--visible');
+    }
+  });
+
+  successBtn.on('click', switchSuccess);
+
+  close.on('click', function () {
+    success.removeClass('success--visible');
+  });
+
+  success.keyup(function(event) {
+      if (event.key === 'Escape') {
+        success.removeClass('success--visible');
+      }
+  });
+  
+  success.on('click', function (event) {
+    if (success.has(event.target).length == 0) {
+      success.toggleClass('success--visible');
     }
   });
  
@@ -153,19 +177,12 @@ $(document).ready(function () {
         data: $(form).serialize(),
         success: function (response) {
           //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
-          $(form)[0].reset();
-          $('.modal__form').css('display', 'none');
-          $('.modal__title').html('Форма отправлена, мы свяжемся с вами через 10 минут<br><br> Советую подписаться на нашу<br><a class="modal__link" href="#">группу Вконтакте</a>');
-          $('.modal__title').css('margin', 'auto');
-          $('.modal__title').css('display', 'flex');
-          $('.modal__title').css('flex-direction', 'column');
-          $('.modal__title').css('align-items', 'center');
-          $('.modal__title').css('justify-content', 'center');
-          $('.modal__link').css('color', '#E3B873');ym(61354918, 'reachGoal', 'form'); return true;
+          $(form)[0].reset();ym(61354918, 'reachGoal', 'form');
+          modal.toggleClass('modal--visible');
+          success.toggleClass('success--visible'); return true;
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);
-          
         }
       });
     }
@@ -201,8 +218,8 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
-          $(form)[0].reset();
+          $(form)[0].reset();ym(61354918, 'reachGoal', 'form');
+          success.toggleClass('success--visible'); return true;
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);
@@ -238,8 +255,8 @@ $(document).ready(function () {
         url: "send.php",
         data: $(form).serialize(),
         success: function (response) {
-          alert('Форма отправлена, мы свяжемся с вами через 10 минут');
-          $(form)[0].reset();
+          $(form)[0].reset();ym(61354918, 'reachGoal', 'form');
+          success.toggleClass('success--visible'); return true;
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);

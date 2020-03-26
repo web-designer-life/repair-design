@@ -1244,6 +1244,51 @@ img {
     cursor: pointer;
     margin-right: 0.64rem; }
 
+.success {
+  position: fixed;
+  visibility: hidden;
+  z-index: 199;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .success--visible {
+    opacity: 1;
+    visibility: visible; }
+  .success__dialog {
+    position: relative;
+    max-width: 36.36rem;
+    background: #131313 url("../img/bg-lines.svg");
+    padding: 2.357rem 3.5rem 1.929rem 3.5rem;
+    color: #fff; }
+  .success__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/close.svg") no-repeat center;
+    border: none;
+    margin: 12px;
+    cursor: pointer; }
+  .success__title {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.357rem;
+    text-align: center; }
+  .success__link {
+    color: #E3B873; }
+
 @-webkit-keyframes 'opacity' {
   0% {
     opacity: 0; }
