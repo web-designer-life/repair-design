@@ -155,13 +155,13 @@ $(document).ready(function () {
           //alert('Форма отправлена, мы свяжемся с вами через 10 минут');
           $(form)[0].reset();
           $('.modal__form').css('display', 'none');
-          $('.modal__title').html('Форма отправлена, мы свяжемся с вами через 10 минут<br><br> Советую подписаться на нашу<br><a class="modal-success__link" href="#">группу Вконтакте</a>');
+          $('.modal__title').html('Форма отправлена, мы свяжемся с вами через 10 минут<br><br> Советую подписаться на нашу<br><a class="modal__link" href="#">группу Вконтакте</a>');
           $('.modal__title').css('margin', 'auto');
           $('.modal__title').css('display', 'flex');
           $('.modal__title').css('flex-direction', 'column');
           $('.modal__title').css('align-items', 'center');
           $('.modal__title').css('justify-content', 'center');
-          $('.modal-success__link').css('color', '#E3B873');ym(61354918, 'reachGoal', 'form'); return true;
+          $('.modal__link').css('color', '#E3B873');ym(61354918, 'reachGoal', 'form'); return true;
         },
         error: function(response) {
           console.error('Ошибка запроса ' + response);
