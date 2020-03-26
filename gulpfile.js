@@ -7,6 +7,18 @@ var minify = require('gulp-minify');
 var htmlmin = require('gulp-htmlmin');
 var tinypng = require('gulp-tinypng-compress');
 
+function serveSass() {
+  return src("./sass/**/*.sass", "./sass/**/*.scss")
+      .pipe(sass())
+      .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
+        add: true,
+        cascade: false,
+        flexbox: true,
+      }))
+      .pipe(dest("./css"))
+      .pipe(browserSync.stream());
+}
+
 function bs() {
   serveSass();
   browserSync.init({
@@ -39,13 +51,16 @@ function buildCSS(done) {
 
 function buildJS(done) {
   src(['js/**.js', '!js/**.min.js'])
-    .pipe(minify({ext:{
-            min:'.js'
-        }
+    .pipe(minify({
+      ext:{
+        min:'.js'
+      },
+      noSource: true,
+
     }))
-    .pipe(dest('dist/js/'));
-  src('js/**.min.js')
-    .pipe(dest('dist/js/'));
+    .pipe(dest('dist/js'));
+    src('js/**.min.js')
+    .pipe(dest('dist/js'));
   done();
 }
 
@@ -80,5 +95,6 @@ function imagemin(done) {
     .pipe(dest('dist/img/'));
   done();
 }
+
 exports.serve = bs;
 exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin);
