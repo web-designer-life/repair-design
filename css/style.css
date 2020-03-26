@@ -1119,9 +1119,7 @@ img {
     margin: auto;
     margin-bottom: 4.714rem;
     max-width: 925px;
-    height: 425px;
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1); }
+    height: 425px; }
 
 /* &#34;Блок-обертка&#34;, где мы задаем фоновое изображение скриншотом как на карте */
 .ymap-container {
