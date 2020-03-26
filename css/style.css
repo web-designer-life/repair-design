@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Futura Book';
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff");
@@ -1084,6 +1085,9 @@ img {
         margin-right: 0.64rem; }
       .footer__policy__label--center {
         justify-content: center; }
+  .footer__phone {
+    text-decoration: none;
+    margin: auto; }
   .footer__button {
     margin: auto;
     padding: 1.285rem 4.785rem; }
@@ -1118,6 +1122,56 @@ img {
     height: 425px;
     -webkit-filter: grayscale(1);
     filter: grayscale(1); }
+
+/* &#34;Блок-обертка&#34;, где мы задаем фоновое изображение скриншотом как на карте */
+.ymap-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  background: url("../img/map.png") #ffffff no-repeat;
+  background-position: center center;
+  background-size: cover;
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.2); }
+
+/* Блок, в котором появится Яндекс.Карта */
+#map-yandex {
+  position: relative;
+  z-index: 7;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-color: transparent; }
+
+.loader {
+  position: absolute;
+  z-index: 15;
+  top: -100%;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #000000;
+  transition: opacity .7s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.55); }
+  .loader-default:after {
+    position: absolute;
+    top: calc(50% - 24px);
+    left: calc(50% - 24px);
+    width: 48px;
+    height: 48px;
+    content: '';
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+    border: solid 8px #ffffff;
+    border-left-color: transparent;
+    border-radius: 50%; }
+  .loader:after, .loader:before {
+    box-sizing: border-box; }
+  .loader.is-active {
+    top: 0;
+    opacity: 1; }
 
 .modal {
   position: fixed;
@@ -1202,6 +1256,30 @@ img {
   0% {
     opacity: 0; }
   100% {
+    opacity: 1; } }
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(359deg); } }
+
+@keyframes rotation {
+  from {
+    transform: rotate(0); }
+  to {
+    transform: rotate(359deg); } }
+
+@-webkit-keyframes blink {
+  from {
+    opacity: .5; }
+  to {
+    opacity: 1; } }
+
+@keyframes blink {
+  from {
+    opacity: .5; }
+  to {
     opacity: 1; } }
 
 @media screen and (max-width: 1200px) {
@@ -1292,6 +1370,8 @@ img {
       display: flex;
       justify-content: flex-start;
       margin-bottom: 67px; }
+    .footer__phone {
+      color: #E3B873; }
     .footer__button {
       width: 100%; }
     .footer__menu {
@@ -1334,7 +1414,9 @@ img {
     min-width: 22.86rem; }
   .hero__text {
     font-size: 1.29rem;
-    margin-bottom: 2.28rem; } }
+    margin-bottom: 2.28rem; }
+  .footer__phone {
+    color: #E3B873; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
