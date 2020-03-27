@@ -418,10 +418,15 @@ img {
   max-width: 100%; }
 
 .section-title__heading {
-  font-weight: normal; }
+  font-family: 'Yeseva One';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 28px;
+  text-transform: uppercase; }
 
 .section-title__image {
-  margin-top: 16px; }
+  margin-top: 12px; }
 
 .header {
   position: fixed;
@@ -603,12 +608,12 @@ img {
       font-family: 'Yeseva One';
       font-style: normal;
       font-weight: normal;
-      font-size: 27px;
-      line-height: 37px;
       letter-spacing: -0.07em;
       text-transform: uppercase;
       margin: 0; }
       .section-title__heading--primary {
+        font-size: 27px;
+        line-height: 37px;
         color: #E3B873; }
     .section-title__word {
       display: flex;
