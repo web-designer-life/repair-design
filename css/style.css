@@ -372,6 +372,8 @@ template {
     color: #fff; }
 
 div.invalid {
+  position: absolute;
+  bottom: -1.1rem;
   color: tomato; }
 
 input.invalid {
@@ -722,7 +724,7 @@ img {
     background-color: rgba(0, 0, 0, 0.8); }
 
 .control__text {
-  max-width: 40.785rem;
+  max-width: 570px;
   margin: auto;
   margin-bottom: 4.285rem;
   text-align: center;
@@ -1255,6 +1257,7 @@ img {
     display: flex;
     flex-direction: column; }
   .modal__input-group {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 3.438rem; }
