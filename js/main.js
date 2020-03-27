@@ -94,13 +94,20 @@ $(document).ready(function () {
   return false;
   });
 
+  $(".menu__logo").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
+  });
+
   $(".nav").on("click","a", function (event) {
     event.preventDefault();
     var id  = $(this).attr('href'),
         top = $(id).offset().top;
     $('body,html').animate({scrollTop: top}, 1500);
   });
-    
+
   $('.hero__scroll-down').click(function(){
   $("html, body").animate({ scrollTop: 9999 }, 1500);
   return false;

@@ -452,7 +452,11 @@ img {
 .logo {
   font-size: 1.075rem;
   color: #E3B873;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-decoration: none; }
+  .logo:hover {
+    color: #E3B873;
+    text-decoration: underline; }
 
 .nav__item {
   color: #fff;
