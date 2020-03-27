@@ -339,6 +339,9 @@ template {
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff; }
+    .button--outline:hover {
+      color: #bdbdbd;
+      border: 1px solid #bdbdbd; }
   .button:active, .button:focus {
     outline: none; }
   .button::-moz-focus-inner {
@@ -1121,6 +1124,9 @@ img {
   .footer__phone {
     text-decoration: none;
     margin: auto; }
+    .footer__phone:hover {
+      color: #E3B873;
+      text-decoration: underline; }
   .footer__button {
     margin: auto;
     padding: 1.285rem 4.785rem; }
@@ -1148,6 +1154,8 @@ img {
       width: 28px;
       height: 28px;
       margin: 0 0.536rem; }
+      .footer__icons__image:hover {
+        opacity: 0.5; }
   .footer__map {
     margin: auto;
     margin-bottom: 4.714rem;
@@ -1402,7 +1410,7 @@ img {
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 138.6%;
     text-align: center;
     text-transform: uppercase; }
@@ -1417,7 +1425,7 @@ img {
       font-family: 'Yeseva One';
       font-style: normal;
       font-weight: normal;
-      font-size: 24px;
+      font-size: 22px;
       line-height: 138.6%;
       text-align: center;
       text-transform: uppercase; }
@@ -1441,7 +1449,7 @@ img {
       font-family: 'Yeseva One';
       font-style: normal;
       font-weight: normal;
-      font-size: 24px;
+      font-size: 22px;
       line-height: 138.6%;
       text-align: center;
       text-transform: uppercase; }
@@ -1540,7 +1548,7 @@ img {
     font-family: 'Yeseva One';
     font-style: normal;
     font-weight: normal;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 28px;
     text-align: center;
     text-transform: uppercase;
@@ -1577,6 +1585,30 @@ img {
     font-weight: 500;
     font-size: 15px;
     line-height: 26px;
+    text-align: center;
+    text-transform: uppercase; }
+  .staff__card__text {
+    width: 233px; }
+  .staff__card__title {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center; }
+  .staff__card__post {
+    font-family: 'Futura Book';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center; }
+  .staff__card__experience {
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 20px;
     text-align: center;
     text-transform: uppercase; }
   .footer__title {
@@ -1637,6 +1669,7 @@ img {
     max-width: 386px;
     font-size: 23px; }
   .hero__text {
+    font-size: 18px;
     max-width: 321px; }
   .hero__button {
     display: block;
