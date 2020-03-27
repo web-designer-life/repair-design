@@ -17,9 +17,14 @@
     &--light
       color: $light
     &__heading
+      font-family: 'Yeseva One'
+      font-style: normal
+      font-weight: normal
+      font-size: 27px
+      line-height: 37px
+      letter-spacing: -0.07em
       text-transform: uppercase
-      font-family: 'Yeseva One', cursive
-      line-height: 138%
+      margin: 0
       &--primary
         color: $primary
     &__word
@@ -28,13 +33,18 @@
       &::after
         content: ''
         width: 92px
-        height: 2px
+        height: 1px
         background-color: $primary
-        margin-left: 2rem
+        margin-left: 34px
     &__text-description
-      font-size: 1.28rem
-      line-height: 2.07rem
+      margin-top: 21px
+      margin-bottom: 46px
       max-width: 31.57rem
+      font-family: 'Futura Book'
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 29px
     &__image
       display: flex
       justify-content: center
@@ -53,16 +63,26 @@
     display: flex
     flex-wrap: wrap
     &__text
-      flex-basis: 50%
-      margin-bottom: 2.42rem
-      padding-bottom: 2rem
+      flex-basis: 43%
+      margin-bottom: 2.6rem
     &__heading
-      font-size: 1.285rem
-      line-height: 1.78rem
-      font-family: 'Yeseva One', cursive
-      color: $primary
+      font-family: 'Yeseva One'
+      font-style: normal
+      font-weight: normal
+      font-size: 18px
+      line-height: 25px
       text-transform: uppercase
-      margin-bottom: 0.64rem
+      color: $primary
+      margin-bottom: 6px
+      margin-top: 0
+    &__value
+      font-family: 'Futura Book'
+      font-style: normal
+      font-weight: normal
+      font-size: 15px
+      line-height: 20px
+    &__information
+      height: 254px
   &-pagination
     &-bullet
       background-color: $light

@@ -417,8 +417,11 @@ body {
 img {
   max-width: 100%; }
 
-.section__title__heading {
+.section-title__heading {
   font-weight: normal; }
+
+.section-title__image {
+  margin-top: 16px; }
 
 .header {
   position: fixed;
@@ -597,9 +600,14 @@ img {
     .section-title--light {
       color: #fff; }
     .section-title__heading {
+      font-family: 'Yeseva One';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 27px;
+      line-height: 37px;
+      letter-spacing: -0.07em;
       text-transform: uppercase;
-      font-family: 'Yeseva One', cursive;
-      line-height: 138%; }
+      margin: 0; }
       .section-title__heading--primary {
         color: #E3B873; }
     .section-title__word {
@@ -608,13 +616,18 @@ img {
       .section-title__word::after {
         content: '';
         width: 92px;
-        height: 2px;
+        height: 1px;
         background-color: #E3B873;
-        margin-left: 2rem; }
+        margin-left: 34px; }
     .section-title__text-description {
-      font-size: 1.28rem;
-      line-height: 2.07rem;
-      max-width: 31.57rem; }
+      margin-top: 21px;
+      margin-bottom: 46px;
+      max-width: 31.57rem;
+      font-family: 'Futura Book';
+      font-style: normal;
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 29px; }
     .section-title__image {
       display: flex;
       justify-content: center;
@@ -634,16 +647,26 @@ img {
   display: flex;
   flex-wrap: wrap; }
   .swiper-slide__text {
-    flex-basis: 50%;
-    margin-bottom: 2.42rem;
-    padding-bottom: 2rem; }
+    flex-basis: 43%;
+    margin-bottom: 2.6rem; }
   .swiper-slide__heading {
-    font-size: 1.285rem;
-    line-height: 1.78rem;
-    font-family: 'Yeseva One', cursive;
-    color: #E3B873;
+    font-family: 'Yeseva One';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
     text-transform: uppercase;
-    margin-bottom: 0.64rem; }
+    color: #E3B873;
+    margin-bottom: 6px;
+    margin-top: 0; }
+  .swiper-slide__value {
+    font-family: 'Futura Book';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px; }
+  .swiper-slide__information {
+    height: 254px; }
 
 .swiper-pagination-bullet {
   background-color: #fff; }
@@ -750,9 +773,14 @@ img {
     .control__policy__checkbox:checked ~ .control__policy__label::before {
       background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
   .control__policy__label {
+    font-family: 'Futura Book';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #181818;
     display: flex;
-    align-items: center;
-    color: #363636; }
+    align-items: center; }
     .control__policy__label::before {
       content: '';
       width: 18px;
