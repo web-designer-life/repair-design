@@ -1748,6 +1748,9 @@ img {
     line-height: 135.84%; }
   .modal__dialog {
     width: 90%;
+    margin: auto; }
+  .success__dialog {
+    width: 90%;
     margin: auto; } }
 
 @media screen and (max-width: 380px) {
