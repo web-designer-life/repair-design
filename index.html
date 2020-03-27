@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Repair Design</title>
 </head>
@@ -163,8 +164,10 @@
           <!-- /.section-title__image -->
         </div>
         <!-- /.section-title -->
-        <div class="control__video video">
-          <img src="img/play-icon.svg" alt="play-icon" class="video__play">
+        <div class="control__video video" id="player">
+          <a class="video__play" data-fancybox href="https://www.youtube.com/watch?v=8LTudha4ci8">
+            <img src="img/play-icon.svg" alt="play-icon">
+          </a> 
         </div>
         <!-- /.control__video video -->
         <p class="control__text">
@@ -209,7 +212,7 @@
             <div data-wow-delay="0.3s" class="card types__card">
               <img src="img/types/type-1.jpg" alt="Косметический ремонт" class="card__image">
               <div class="card__text">
-                <h3 class="card__title">Косметический ремонт</h3>
+                <h3 class="card__title types__title">Косметический ремонт</h3>
                 <!-- /.card__title -->
                 <ul class="card__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
@@ -240,7 +243,7 @@
             <div data-wow-delay="0.2s" class="card types__card">
               <img src="img/types/type-2.jpg" alt="Капитальный ремонт" class="card__image">
               <div class="card__text">
-                <h3 class="card__title">Капитальный ремонт</h3>
+                <h3 class="card__title types__title">Капитальный ремонт</h3>
                 <!-- /.card__title -->
                 <ul class="card__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
@@ -271,7 +274,7 @@
             <div data-wow-delay="0.1s" class="card types__card">
               <img src="img/types/type-3.jpg" alt="Дизайнерский ремонт" class="card__image">
               <div class="card__text">
-                <h3 class="card__title">Дизайнерский ремонт</h3>
+                <h3 class="card__title types__title">Дизайнерский ремонт</h3>
                 <!-- /.card__title -->
                 <ul class="card__list">
                   <li class="card__item">Демонтаж старых покрытий</li>
@@ -402,11 +405,11 @@
                   <!-- /.card__item -->
                   <li class="card__item">Выезд на подбор материалов</li>
                   <!-- /.card__item -->
-                  <li class="card__item">Выбор мебели</li>
+                  <li id="staff" class="card__item">Выбор мебели</li>
                   <!-- /.card__item -->
                 </ul>
                 <!-- /.card__list -->
-                <strong id="staff" class="card__price">900 руб / m<sup>2</sup></strong>
+                <strong class="card__price">900 руб / m<sup>2</sup></strong>
                 <!-- /.card__pricetag -->
               </div>
               <!-- /.card__text -->
@@ -719,6 +722,7 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

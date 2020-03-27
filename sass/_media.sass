@@ -18,7 +18,11 @@
       display: none
     &__content
       margin-left: 0
-@media screen and ( max-width: 760px ) 
+@media screen and ( max-width: 906px )
+  .types
+    &__title
+      max-width: 160px
+@media screen and ( max-width: 780px ) 
   .section
     padding: 0
     &-title
@@ -29,8 +33,6 @@
           content: ''
           width: 0
           height: 0
-  .projects
-    padding-bottom: 30rem
   .types
     padding-top: 82px
   .row
@@ -38,6 +40,11 @@
     align-items: center
   .col
     margin: 0 0
+  .projects
+    padding-bottom: 30rem
+  .swiper-slide
+    &__text
+      flex-basis: 50%
   .col-50
     margin-bottom: 34px
     width: 100%
@@ -335,6 +342,8 @@
       font-size: 14px
       line-height: 158.48%
       margin-bottom: 38px
+    &__col
+      margin-left: 0
   .swiper-slide
     &__text
       flex-basis: 44%
