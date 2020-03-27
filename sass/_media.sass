@@ -1,9 +1,12 @@
-@media screen and ( max-width: 1200px )
+@media screen and ( max-width: 1250px )
   html
     font-size: 12px
   .nav
     &__item
       margin-right: 1rem
+@media screen and ( max-height: 1250px )
+  html
+    font-size: 12px
 @media screen and ( max-width: 992px )
   .container
     margin: auto
@@ -169,65 +172,6 @@
     &__text
       font-size: 1.29rem
       margin-bottom: 2.28rem
-  .control
-    &__section-title
-      margin-bottom: 3.6rem
-    &__text
-      font-family: 'Futura Book'
-      font-style: normal
-      font-weight: normal
-      font-size: 14px
-      line-height: 169.8%
-      text-align: center
-      max-width: 340px
-      &::before
-        margin-bottom: 17px
-    &__video
-      margin-bottom: 25px
-    &__title
-      font-family: 'Yeseva One'
-      font-style: normal
-      font-weight: normal
-      font-size: 22px
-      line-height: 28px
-      text-align: center
-      text-transform: uppercase
-      margin-bottom: 18px
-    &__phone
-      color: $primary
-    &__input
-      font-family: 'Futura Book'
-      font-style: normal
-      font-weight: normal
-      font-size: 18px
-      line-height: 24px
-      margin-top: 0
-      padding-top: 0
-      &-group
-        margin-bottom: 61px
-    &__label
-      font-family: 'Futura Book'
-      font-style: normal
-      font-weight: normal
-      font-size: 15px
-      line-height: 20px
-      margin-bottom: 0
-    &__policy
-      &__label
-        font-family: 'Futura Book'
-        font-style: normal
-        font-weight: normal
-        font-size: 16px
-        line-height: 22px
-        margin-top: 5px
-    &__button
-      font-family: 'Futura Demi'
-      font-style: normal
-      font-weight: 500
-      font-size: 15px
-      line-height: 26px
-      text-align: center
-      text-transform: uppercase
   .staff
     &__card
       &__text
@@ -305,6 +249,18 @@
   .hero
     &__scroll-down
       display: none
+  .modal
+    &__dialog
+      height: 
+      margin: auto
+    &__title
+      margin-bottom: 10px
+    &__input-group
+      margin-bottom: 2rem
+    &__policy
+      margin-bottom: 5px
+    &__button
+      padding: 13px 25px
 @media screen and ( max-width: 525px ) 
   .hero
     &__content
@@ -398,6 +354,10 @@
       font-weight: normal
       font-size: 14px
       line-height: 135.84%
+  .modal
+    &__dialog
+      width: 90%
+      margin: auto
 @media screen and ( max-width: 380px ) 
   .control
     &__video
@@ -406,3 +366,28 @@
   .video
     &__play
       width: 97px
+  .modal
+    &__title
+      font-size: 1.1rem
+    &__button
+      width: 100%
+@media screen and ( max-height: 380px ) 
+  .modal
+    &__dialog
+      height: 90%
+      margin: auto
+    &__form
+      width: 100%
+    &__title
+      font-size: 1rem
+      margin-bottom: 10px
+    &__input-group
+      margin-bottom: 1.3rem
+    &__policy
+      margin-bottom: 5px
+    &__button
+      padding: 13px 25px
+@media screen and ( max-height: 350px ) 
+  .modal
+    &__button
+      padding: 10px 10px

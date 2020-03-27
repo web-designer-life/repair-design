@@ -469,6 +469,9 @@ img {
 
 .phone {
   color: #E3B873; }
+  .phone:hover {
+    text-decoration: none;
+    opacity: 0.5; }
 
 .contacts__phone {
   margin-right: 45px; }
@@ -754,6 +757,7 @@ img {
   animation: opacity 3s; }
 
 .control__input-group {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-basis: 30%; }
@@ -1096,6 +1100,7 @@ img {
   .footer__input {
     padding-top: 0.3rem; }
     .footer__input-group {
+      position: relative;
       display: flex;
       flex-direction: column;
       flex-basis: 45%;
@@ -1373,11 +1378,15 @@ img {
   to {
     opacity: 1; } }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
   html {
     font-size: 12px; }
   .nav__item {
     margin-right: 1rem; } }
+
+@media screen and (max-height: 1250px) {
+  html {
+    font-size: 12px; } }
 
 @media screen and (max-width: 992px) {
   .container {
@@ -1537,63 +1546,6 @@ img {
   .hero__text {
     font-size: 1.29rem;
     margin-bottom: 2.28rem; }
-  .control__section-title {
-    margin-bottom: 3.6rem; }
-  .control__text {
-    font-family: 'Futura Book';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 169.8%;
-    text-align: center;
-    max-width: 340px; }
-    .control__text::before {
-      margin-bottom: 17px; }
-  .control__video {
-    margin-bottom: 25px; }
-  .control__title {
-    font-family: 'Yeseva One';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 22px;
-    line-height: 28px;
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 18px; }
-  .control__phone {
-    color: #E3B873; }
-  .control__input {
-    font-family: 'Futura Book';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    margin-top: 0;
-    padding-top: 0; }
-    .control__input-group {
-      margin-bottom: 61px; }
-  .control__label {
-    font-family: 'Futura Book';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 0; }
-  .control__policy__label {
-    font-family: 'Futura Book';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    margin-top: 5px; }
-  .control__button {
-    font-family: 'Futura Demi';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 26px;
-    text-align: center;
-    text-transform: uppercase; }
   .staff__card__text {
     width: 233px; }
   .staff__card__title {
@@ -1666,7 +1618,17 @@ img {
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
-    display: none; } }
+    display: none; }
+  .modal__dialog {
+    margin: auto; }
+  .modal__title {
+    margin-bottom: 10px; }
+  .modal__input-group {
+    margin-bottom: 2rem; }
+  .modal__policy {
+    margin-bottom: 5px; }
+  .modal__button {
+    padding: 13px 25px; } }
 
 @media screen and (max-width: 525px) {
   .hero__content {
@@ -1763,11 +1725,38 @@ img {
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
-    line-height: 135.84%; } }
+    line-height: 135.84%; }
+  .modal__dialog {
+    width: 90%;
+    margin: auto; } }
 
 @media screen and (max-width: 380px) {
   .control__video {
     height: 207px;
     background: #131313 url("../img/video-mask-adaptive.jpg") no-repeat center; }
   .video__play {
-    width: 97px; } }
+    width: 97px; }
+  .modal__title {
+    font-size: 1.1rem; }
+  .modal__button {
+    width: 100%; } }
+
+@media screen and (max-height: 380px) {
+  .modal__dialog {
+    height: 90%;
+    margin: auto; }
+  .modal__form {
+    width: 100%; }
+  .modal__title {
+    font-size: 1rem;
+    margin-bottom: 10px; }
+  .modal__input-group {
+    margin-bottom: 1.3rem; }
+  .modal__policy {
+    margin-bottom: 5px; }
+  .modal__button {
+    padding: 13px 25px; } }
+
+@media screen and (max-height: 350px) {
+  .modal__button {
+    padding: 10px 10px; } }
