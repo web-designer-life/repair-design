@@ -1424,6 +1424,11 @@ img {
     margin: 0 0; }
   .projects {
     padding-bottom: 30rem; }
+    .projects__text-description {
+      max-width: 100%; }
+    .projects__container {
+      width: 70%;
+      margin: auto; }
   .swiper-slide__text {
     flex-basis: 50%; }
   .col-50 {
@@ -1716,9 +1721,13 @@ img {
     font-weight: normal;
     font-size: 14px;
     line-height: 158.48%;
-    margin-bottom: 38px; }
+    margin-bottom: 38px;
+    max-width: 305px; }
   .projects__col {
     margin-left: 0; }
+  .projects__container {
+    width: 100%;
+    margin: auto; }
   .swiper-slide__text {
     flex-basis: 44%; }
   .swiper-slide__information {
