@@ -108,9 +108,11 @@ $(document).ready(function () {
     $('body,html').animate({scrollTop: top}, 1500);
   });
 
-  $('.hero__scroll-down').click(function(){
-  $("html, body").animate({ scrollTop: 9999 }, 1500);
-  return false;
+  $(".hero__link").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+    $('body,html').animate({scrollTop: top}, 1500);
   });
 
   var mySwiper = new Swiper ('.swiper-container', {
@@ -175,7 +177,7 @@ $(document).ready(function () {
         required: "Заполните поле: Email",
         email: "Введите корректный email (формат: name@domain.com)"
       },
-      policyCheckbox: ""
+      policyCheckbox: "Подтвердите соглашение"
     },
     submitHandler: function(form) {
       $.ajax({
@@ -217,7 +219,7 @@ $(document).ready(function () {
       },
       userPhone: "Заполните поле: Телефон",
       userQuestion: "Заполните поле: Вопрос",
-      policyCheckbox: ""
+      policyCheckbox: "Подтвердите соглашение"
     },
     submitHandler: function(form) {
       $.ajax({
@@ -254,7 +256,7 @@ $(document).ready(function () {
         maxlength: "Имя может иметь максимум 15 букв"
       },
       userPhone: "Заполните поле: Телефон",
-      policyCheckbox: ""
+      policyCheckbox: "Подтвердите соглашение"
     },
     submitHandler: function(form) {
       $.ajax({

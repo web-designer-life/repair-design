@@ -1,6 +1,16 @@
 .design
+  position: relative
   &__section-title
     margin-bottom: 3.5rem
+  &::before
+    content: ''
+    position: absolute 
+    bottom: 0 
+    left: 0
+    width: 100%
+    height: 50%
+    background: $dark
+    z-index: -1
 .section-title
   &__text
     margin: auto
@@ -41,4 +51,5 @@
     background-color: $primary
     color: $light
     padding: 1.214rem 5.86rem 1.214rem 2.64rem
+    box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5)
 

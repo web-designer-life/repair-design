@@ -373,7 +373,7 @@ template {
 
 div.invalid {
   position: absolute;
-  bottom: -1.1rem;
+  bottom: -1.45rem;
   color: tomato; }
 
 input.invalid {
@@ -780,6 +780,7 @@ img {
     color: #363636; }
 
 .control__policy {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-basis: 100%;
@@ -852,10 +853,22 @@ img {
   text-transform: uppercase;
   background-color: #E3B873;
   color: #fff;
-  padding: 1.214rem 2.64rem; }
+  padding: 1.214rem 2.64rem;
+  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
 
-.design__section-title {
-  margin-bottom: 3.5rem; }
+.design {
+  position: relative; }
+  .design__section-title {
+    margin-bottom: 3.5rem; }
+  .design::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #131313;
+    z-index: -1; }
 
 .section-title__text {
   margin: auto;
@@ -898,7 +911,8 @@ img {
   text-transform: uppercase;
   background-color: #E3B873;
   color: #fff;
-  padding: 1.214rem 5.86rem 1.214rem 2.64rem; }
+  padding: 1.214rem 5.86rem 1.214rem 2.64rem;
+  box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5); }
 
 .staff__col {
   margin-top: 20px;
@@ -1112,6 +1126,7 @@ img {
         flex-basis: 100%;
         margin-bottom: 2rem; }
   .footer__policy {
+    position: relative;
     display: flex;
     justify-content: center;
     flex-basis: 100%;
@@ -1227,6 +1242,7 @@ img {
     opacity: 1; }
 
 .modal {
+  outline: none;
   position: fixed;
   visibility: hidden;
   z-index: 199;
@@ -1281,26 +1297,28 @@ img {
     padding: 19px 46px;
     align-self: flex-end; }
 
-.policy__checkbox {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden; }
-  .policy__checkbox:checked ~ .policy__label::before {
-    background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
-
-.policy__label {
-  display: flex;
-  align-items: center; }
-  .policy__label::before {
-    content: '';
-    width: 18px;
-    height: 18px;
-    border: 1px solid #E3B873;
-    border-radius: 1px;
-    cursor: pointer;
-    margin-right: 0.64rem; }
+.policy {
+  position: relative; }
+  .policy__checkbox {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden; }
+    .policy__checkbox:checked ~ .policy__label::before {
+      background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
+  .policy__label {
+    display: flex;
+    align-items: center; }
+    .policy__label::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border: 1px solid #E3B873;
+      border-radius: 1px;
+      cursor: pointer;
+      margin-right: 0.64rem; }
 
 .success {
+  outline: none;
   position: fixed;
   visibility: hidden;
   z-index: 199;
