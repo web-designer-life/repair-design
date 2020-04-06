@@ -1,11 +1,23 @@
 .staff
+  position: relative
+  &::before
+    content: ''
+    position: absolute 
+    top: 0 
+    left: 0
+    width: 100%
+    height: 50%
+    background: $dark
+    z-index: -1
   &__col
     margin-top: 20px
     padding-left: 35px
   &__section-title
     &__heading
+      color: $light
       margin-top: 0
     &__text
+      color: $light
       margin: auto
       max-width: 448px
       text-transform: none

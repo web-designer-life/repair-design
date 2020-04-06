@@ -35,8 +35,10 @@ function bs() {
 function serveSass() {
   return src("./sass/**/*.sass", "./scss/**/*.scss")
     .pipe(sass())
-    .pipe(autoprefixer({
-      cascade: false
+    .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
+      add: true,
+      cascade: false,
+      flexbox: true,
     }))
     .pipe(dest("./css"))
     .pipe(browserSync.stream());
